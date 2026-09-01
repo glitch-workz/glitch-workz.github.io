@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLITCH.WORKZ // TERMINAL</title>
+    <style>
+        /* Core Cyberpunk Terminal Styling */
+        body {
+            background-color: #0b0c10;
+            color: #00f0ff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .terminal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ff007f;
+            background-color: #0b0c10;
+            padding: 25px;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+            border-radius: 4px;
+        }
+
+        h1, h2, h3 {
+            color: #ff007f;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px dashed #ff007f;
+            margin: 20px 0;
+        }
+
+        .system-log {
+            background-color: #11141a;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #8c92ac;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .policy-box {
+            border: 1px solid #ff007f;
+            background-color: #1f1122;
+            padding: 15px;
+            margin: 20px 0;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Image Display Grid Layout */
+        .manifest-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .sticker-card {
+            background: #1f2833;
+            border: 1px solid #00f0ff;
+            padding: 10px;
+            width: 145px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 240, 255, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .sticker-card:hover {
+            transform: scale(1.03);
+            border-color: #ff007f;
+        }
+
+        .sticker-card img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #333;
+            background: #000;
+            image-rendering: pixelated;
+        }
+
+        .sticker-label {
+            color: #00f0ff;
+            font-size: 11px;
+            margin: 8px 0 0 0;
+            font-weight: bold;
+        }
+
+        /* Price Chart Formatting */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #11141a;
+            color: #ff007f;
+        }
+
+        td {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terminal-container">
+        
+        <!-- SYSTEM HEADER IDENT -->
+        <h1>glitch.works</h1>
+        <p style="color: #8c92ac; font-size: 12px; margin: -10px 0 20px 0;">
+            SYS.LOC: 51.5074° N, 0.1278° W // TRAFALGAR ROUNDABOUT, UK<br>
+            SYS.TIME: <span id="live-timestamp" style="color: #00f0ff;">LOADING...</span>
+        </p>
+
+        <!-- AUTOMATED LTSHD ALERT PANEL -->
+        <div id="ltshd-alert-panel" style="display: none; background: #201133; border: 1px dashed #ff007f; padding: 15px; margin-bottom: 20px;">
+            <span style="color: #ff007f; font-weight: bold;">[⚠️] CRITICAL SYSTEM ALERT // INCOMING LTSHD SIGNAL</span>
+            <p id="ltshd-content" style="color: #fff; margin: 5px 0 0 0; font-size: 13px;"></p>
+        </div>
+
+        <!-- RECENT SYSTEM DEVELOPER LOG -->
+        <div class="system-log">
+            <span style="color: #ff007f; font-weight: bold;">// DEV_LOG_ENTRY:</span> This website, brand layout configuration, and supply pipeline framework were engineered independently using AI models directly on a Google TV station interface. Zero corporate backing. True underground framework. Operational guidelines authorized under the Order of The Bunker.
+        </div>
+
+        <!-- AUTOMATED COUNTDOWN MATRIX BLOCK -->
+        <div id="seasonal-countdown-area" style="background: #11141a; padding: 15px; border: 1px solid #333; margin-bottom: 20px; text-align: center;">
+            <!-- Handled dynamically by automated JavaScript clock -->
+        </div>
+
+        <!-- DYNAMIC MANIFEST AREA FOR IMAGES -->
+        <div id="manifest-root-container">
+            <!-- Asset cards or Coming Soon blocks are loaded dynamically here -->
+        </div>
+
+        <hr>
+
+        <!-- PRICING TIER SCHEMATICS -->
+        <h3>[📊] PHYSICAL PRICING MATRIX</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Asset Classification</th>
+                    <th>Volume Allocated</th>
+                    <th>Trade Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="highlight">Unit Asset</span></td>
+                    <td>x1 Unit</td>
+                    <td>£0.30</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Mix Pack</span></td>
+                    <td>x10 Units (Mix & Match Active)</td>
+                    <td>£3.00</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Loyal Roll</span></td>
+                    <td>x100 Units</td>
+                    <td>£30.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 12px; color: #8c92ac;">⚡ <span class="highlight" style="color: #ff007f;">Alpha Drop Promo:</span> First 5 verified trades secure 10x stickers for £1.50 + lifetime 5% cash discount voucher.</p>
+
+        <!-- SECURITY & BRAND TRADE RULES -->
+        <div class="policy-box">
+            <h3>[☠] DISTRIBUTION PROTOCOLS</h3>
+            <p><span class="highlight">ORDER POLICY:</span> You can only purchase and order GLITCH.WORKZ physical assets directly at the coordinate locations where they are located. Strictly no online shopping links. No digital transactions. Cash trades only.</p>
+            <p style="margin-bottom: 0;"><span class="highlight">LOCATION LOGISTICS:</span> Physical drop points are hidden and unlisted until they hit the public streets. Online sensors are blocked. Keep track of coordinates available to the public.</p>
+        </div>
+    <!-- REVENUE & TIME CALCULATOR AUTOMATION SCRIPT -->
+    <script>
+    // Mathematical algorithm to determine exact dynamic Easter Sunday date
+    function getEasterSunday(year) {
+        const f = Math.floor,
+              G = year % 19,
+              C = f(year / 100),
+              H = (C - f(C / 4) - f((8 * C + 13) / 25) + 19 * G + 15) % 30,
+              I = H - f(H / 28) * (1 - f(H / 28) * f(29 / (H + 1)) * f((21 - G) / 11)),
+              J = (year + f(year / 4) + I + 2 - C + f(C / 4)) % 7,
+              L = I - J,
+              month = 3 + f((L + 40) / 44),
+              day = L + 28 - 31 * f(month / 4);
+        return new Date(year, month - 1, day);
+    }
+
+    function updateGlitchSystem() {
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        
+        // System updates precisely on December 1st at 00:00:00 AM local device time
+        const winterStart = new Date(currentYear, 11, 1, 0, 0, 0); 
+        
+        // Clock loop refresh rendering
+        document.getElementById('live-timestamp').innerText = now.toLocaleString();
+
+        const countdownArea = document.getElementById('seasonal-countdown-area');
+        const manifestContainer = document.getElementById('manifest-root-container');
+        const ltshdPanel = document.getElementById('ltshd-alert-panel');
+        const ltshdContent = document.getElementById('ltshd-content');
+
+        // 1. CHRONO EVALUATION FOR INTEGRATED LTSHD SIGNALS
+        const currentMonth = now.getMonth(); 
+        const currentDate = now.getDate();
+        
+        const easterSunday = getEasterSunday(currentYear);
+        const isEaster = (now.getMonth() === easterSunday.getMonth() && now.getDate() === easterSunday.getDate());
+
+        let signalActive = false;
+        let signalText = "";
+
+        if (currentMonth === 0 && currentDate === 1) {
+            // New Year's Day Override
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_NEW_GRID_GEN</b><br>Global calendar register reset. Log files wiped clean. Initialising fresh bunker matrix strings for the new operational cycle.";
+        } else if (currentMonth === 1 && currentDate === 14) {
+            // Valentine's Override
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_AMOUR_LINK</b><br>Neural network synchronisation frequency matched. Local terminal nodes shifted to neon hot-pink warning profiles for 24 hours.";
+        } else if (currentMonth === 2 && currentDate === 17) {
+            // St. Patrick's Override
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_NEON_CLOVER</b><br>Bunker fuel matrix overloaded with emerald radioactive plasma. Custom green reflective filters mapped onto manufacturing outputs.";
+        } else if (isEaster) {
+            // Easter Override
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_EASTER_EGG</b><br>Encrypted data capsules detected inside the network layers. Trace the grid coordinates to extract the secret visual asset package.";
+        } else if (currentMonth === 5 && currentDate === 21) {
+            // Summer Solstice Override
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_SOLAR_PEAK</b><br>Maximum solar flare exposure recorded. Terminal cooling systems running at critical load. Heat-shielded sticker variants activated.";
+        } else if (currentMonth === 7 && currentDate === 26) {
+            // Company Birthday Anniversary (August 26)
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_BUNKER_ORIGIN</b><br>System Anniversary protocol live. Commemorating the original August 26 launch checkpoint. Standby for legacy terminal configurations.";
+        } else if (currentMonth === 9) {
+            // Halloween Override (All October)
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_MUTED_SKULL</b><br>Core asset arrays corrupted with custom toxic pumpkin ink textures. Automated stencil parameters active for the seasonal threshold.";
+        } else if (currentMonth === 11 && currentDate >= 20 && currentDate <= 26) {
+            // Christmas/Holiday Override (Dec 20-26)
+            signalActive = true;
+            signalText = "<b>PROTOCOL: LTSHD // OPERATION_CHROME_GLITCH_MAS</b><br>Limited-Time Seasonal Holiday Drop online. Glitched chrome gift tags and frozen binary overlays uploaded to physical pick-up terminals.";
+        }
+
+        if (signalActive) {
+            ltshdPanel.style.display = "block";
+            ltshdContent.innerHTML = signalText;
+        } else {
+            ltshdPanel.style.display = "none";
+        }
+
+        // 2. MAIN SEASONS ENGINE (AUTUMN DROP 1 MANIFEST VS WINTER DROP 2 SECRET LOCKDOWN)
+        if (now >= winterStart) {
+            // --- WINTER ACTIVE STATE ---
+            countdownArea.innerHTML = `
+                <p style="color: #00f0ff; font-weight: bold; margin: 0; font-size: 16px; letter-spacing: 1px;">GLITCH.WORKZ // DROP 2 // COMING SOON</p>
+            `;
+            manifestContainer.innerHTML = ``;
+        } else {
+            // --- AUTUMN ACTIVE STATE WITH LIVE COUNTDOWN ---
+            const timeDifference = winterStart - now;
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            countdownArea.innerHTML = `
+                <p style="color: #ffaa00; font-weight: bold; margin: 0;">[🍂] CURRENT SEASON: DROP 01 // AUTUMN // OPERATIONAL</p>
+                <p style="color: #fff; font-weight: bold; margin: 10px 0 5px 0; font-size: 13px;">⏳ TIME REMAINING UNTIL THE SYSTEM THRESHOLD SHIFT:</p>
+                <p style="color: #ff007f; font-size: 18px; font-weight: bold; letter-spacing: 1px; margin: 0;">
+                    ${days}D : ${hours}H : ${minutes}M : ${seconds}S
+                </p>
+            `;
+
+            // RENDERS ASSETS VIA YOUR EXACT PATH CODES
+            manifestContainer.innerHTML = `
+                <h3 style="margin-bottom: 15px;">[📦] ACTIVE AUTUMN MANIFEST</h3>
+                <div class="manifest-grid">
+                    
+                    <!-- Sticker 1 -->
+                    <div class="sticker-card">
+                        <img src="images/drop_01/roundaboutradar.png" alt="[01_RADAR]">
+                        <p class="sticker-label">[01_RADAR]</p>
+                    </div>
+
+                    <!-- Sticker 2 -->
+                    <div class="sticker-card">
+                        <img src="images/drop_01/glitchworkzxai.png" alt="[02_CORE]">
+                        <p class="sticker-label">[02_CORE]</p>
+                    </div>
+
+                    <!-- Sticker 3 -->
+                    <div class="sticker-card">
+                        <img src="images/drop_01/cautionskull.png" alt="[03_ALERT]">
+                        <p class="sticker-label">[03_ALERT]</p>
+                    </div>
+
+                    <!-- Sticker 4 -->
+                    <div class="sticker-card">
+                        <img src="images/drop_01/biohazard.png" alt="[04_HEX_SYS]">
+                        <p class="sticker-label">[04_HEX_SYS]</p>
+                    </div>
+
+                </div>
+            `;
+        }
+    }
+
+    // Initialize tracking core loop execution every 1000ms
+    setInterval(updateGlitchSystem, 1000);
+    updateGlitchSystem();
+    </script>
+</body>
+</html>
+
+    </div>
